@@ -15,7 +15,7 @@ def demo(df):
 import logging
 import os
 logging_dir="log"
-os.makedirs(logging_dir,exists=True)
+os.makedirs(logging_dir,exist_ok=True)
 logging_str="[%(asctime)s:%(levelname)s:%(module)s] %(message)s"
 logging.basicConfig(filename=os.path.join(logging_dir,"runnig_logs.log"),level=logging.INFO,format=logging_str)
 print()
