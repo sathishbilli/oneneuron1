@@ -14,6 +14,7 @@ def demo(df):
     """
 import logging
 import os
+from tqdm import tqdm
 logging_dir="log"
 os.makedirs(logging_dir,exist_ok=True)
 logging_str="[%(asctime)s:%(levelname)s:%(module)s] %(message)s"
@@ -32,4 +33,6 @@ try:
 except Exception as e:
     logging.info("________________________ no is 0  ______________________________")
     logging.exception(e)
-   
+def run_for(name,no):
+    for i in tqdm(range(0,no),total=no,desc='train model'):
+        print(name,' ',i)
