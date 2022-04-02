@@ -13,10 +13,14 @@ def demo(df):
         demou
     """
 import logging
-logging_str="[%(asctime)s:%(levelname)s:%(module)s]%(message)"
+logging_str="[%(asctime)s:%(levelname)s:%(module)s] %(message)s"
 logging.basicConfig(level=logging.INFO,format=logging_str)
-def print_name(name):
-    logging.info(f'name is {name}')
-def add_no(n1,n2):
-    logging.info(f'final ans is {n1}+{n2}')
+print()
+logging.info("this a print name function")
+class demo:
+
+    # def print_name(name):
+    #     logging.info(f'name is {name}')
+    def add_no(n1,n2):
+        logging.info('ans is ',int(n1)+int(n2))
    
